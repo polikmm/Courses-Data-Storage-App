@@ -19,9 +19,9 @@ jobs:
         with:
           node-version: 18
       - name: install dependencies
-        uses: npm ci
+        run: npm ci
       - name: build project
-        uses: npm run build
+        run: npm run build
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
