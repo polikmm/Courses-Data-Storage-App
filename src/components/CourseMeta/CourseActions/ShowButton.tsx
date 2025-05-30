@@ -1,4 +1,4 @@
-import styles from "./style.module.css";
+import styles from "./styles.module.css";
 import { APP_ROUTES, SHOW_COURSE_BUTTON } from "../../../constants";
 import { useNavigate } from "react-router-dom";
 

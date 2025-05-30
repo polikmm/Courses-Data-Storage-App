@@ -1,0 +1,10 @@
+.header {
+  border-bottom: 1px solid var(--light-grey);
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}

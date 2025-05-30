@@ -1,5 +1,5 @@
-import styles from "./style.module.css";
-import icon from "../../../assets/images/Icon-Edit.svg";
+import styles from "./styles.module.css";
+import icon from "../../../assets/icons/edit.svg";
 import { useNavigate } from "react-router-dom";
 import { APP_ROUTES } from "../../../constants";
 

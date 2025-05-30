@@ -1,0 +1,19 @@
+.courseDetails {
+  grid-area: course__details;
+  max-width: 300px;
+  min-width: 150px;
+}
+
+.cardAuthorsList {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.courseDetail span {
+  font-weight: bold;
+}
+
+.courseDetail {
+  font-weight: normal;
+}

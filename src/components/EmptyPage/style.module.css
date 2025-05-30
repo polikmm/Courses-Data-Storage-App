@@ -1,0 +1,22 @@
+.emptyList {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyListTitle {
+  font-size: 2rem;
+}
+
+.emptyListSubtitle {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.emptyListButton {
+  min-width: 170px;
+}

@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../../../store";
-import styles from "./style.module.css";
+import styles from "./styles.module.css";
 import icon from "../../../assets/icons/trash.svg";
 import { removeCourse } from "../../../store/coursesSlice/coursesSlice";
 

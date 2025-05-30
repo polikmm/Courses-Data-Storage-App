@@ -1,7 +1,7 @@
 import { ShowButton } from "./ShowButton";
 import { DeleteButton } from "./DeleteButton";
 import { EditButton } from "./EditButton";
-import styles from "./style.module.css";
+import styles from "./styles.module.css";
 import type CardData from "../../../types/CardData";
 
 export function CourseActions({ course }: { course: CardData }) {
