@@ -17,7 +17,7 @@ const initialState: CoursesState = {
   error: null,
 }
 
-const fetchCourses = createAsyncThunk(
+export const fetchCourses = createAsyncThunk(
   "courses/fetchCourses",
   async () => {
     const response = await fetch(
