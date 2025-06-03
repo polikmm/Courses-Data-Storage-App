@@ -7,6 +7,7 @@ import { UserProvider } from './providers/UserProvider'
 import { Header } from './components/Header/Header'
 import { CoursesContainer } from './components/CoursesContainer/CoursesContainer'
 import { Courses } from './components/Courses/Courses'
+import { Course } from './components/Course/Course'
 
 function App() {
   return (
@@ -15,9 +16,12 @@ function App() {
         <Header />
         <Routes>
           <Route element={<AuthorisationRouter />}>
-             <Route path={APP_ROUTES.HOME} element={<CoursesContainer />}>
+            <Route path={APP_ROUTES.HOME} element={<CoursesContainer />}>
               <Route index path={APP_ROUTES.COURSES} element={<Courses />} />
-
+              <Route
+                path={APP_ROUTES.COURSE_INFO_TEMPLATE}
+                element={<Course />}
+              />
             </Route>
           </Route>
           <Route path={APP_ROUTES.LOGIN} element={<LoginPage />} />
