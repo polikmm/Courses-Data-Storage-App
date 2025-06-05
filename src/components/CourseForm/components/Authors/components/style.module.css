@@ -1,0 +1,71 @@
+.addAuthor {
+  grid-area: authors;
+  display: grid;
+  grid-template-areas:
+    "label . . "
+    "input input button"
+    "warning warning warning";
+  column-gap: 10px;
+  justify-content: left;
+  align-items: center;
+  height: 80px;
+}
+
+.warning {
+  grid-area: warning;
+}
+
+.addAuthor label {
+  grid-area: label;
+}
+
+.addAuthor input {
+  grid-area: input;
+}
+
+.addAuthor button {
+  grid-area: button;
+}
+
+.authorsList {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.authorsListItem {
+  display: flex;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 170px;
+}
+
+.authorsListItem h5 {
+  width: 80px;
+}
+
+.courseAuthors {
+  grid-area: courseAuthors;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.courseAuthors div {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.buttonIcon {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.buttonIcon img {
+  width: 20px;
+  height: 20px;
+}

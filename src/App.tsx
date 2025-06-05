@@ -13,6 +13,7 @@ import { fetchAuthors } from './store/authorsSlice/authorsSlice'
 import { fetchCourses } from './store/coursesSlice/coursesSlice'
 import type { AppDispatch } from './store'
 import { Wrapper } from './components/Wrapper/Wrapper'
+import { CourseEditor } from './components/CourseEditor/CourseEditor'
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
@@ -33,6 +34,10 @@ function App() {
               <Route
                 path={APP_ROUTES.COURSE_INFO_TEMPLATE}
                 element={<Course />}
+              />
+              <Route
+                path={APP_ROUTES.COURSE_EDIT_TEMPLATE}
+                element={<CourseEditor />}
               />
             </Route>
           </Route>
