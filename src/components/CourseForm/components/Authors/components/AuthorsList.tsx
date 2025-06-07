@@ -29,7 +29,7 @@ export function AuthorsList() {
   };
 
   const handleDeleteAuthor = (id: string) => {
-  const matches = courses.map((course) => course.authors.find((el) => el === id));
+  const matches = courses.map((course) => course.authors.find((el) => el === id)).filter((el) => Boolean(el));
 
   if (!matches.length) {
     dispatch(deleteAuthor(id));

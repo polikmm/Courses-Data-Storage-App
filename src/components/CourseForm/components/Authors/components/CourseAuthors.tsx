@@ -1,6 +1,6 @@
 import { COURSE_FORM_COURSE_AUTHORS_TITLE } from "../../../../../constants";
 import { removeAuthorFromCourse } from "../../../../../store/authorsSlice/authorsSlice";
-import trash from "../../../../../assets/icons/trash.svg";
+import trash from "../../../../../assets/icons/trash__black.svg";
 import style from "./style.module.css";
 import type { RootState } from "../../../../../store";
 import { useSelector, useDispatch } from "react-redux";

@@ -1,3 +1,9 @@
 .coursesAddButton {
   width: 180px;
 }
+
+.coursesList {
+  padding: 60px 0px;
+  display: grid;
+  row-gap: 60px;
+}

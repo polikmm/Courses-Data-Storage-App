@@ -1,5 +1,5 @@
 import cross from "../../../../../assets/icons/cross.svg";
-import trash from "../../../../../assets/icons/trash.svg";
+import trash from "../../../../../assets/icons/trash__black.svg";
 import style from "./style.module.css";
 
 export type Prop = {
@@ -25,7 +25,7 @@ export function Author({ id, name, onAdd, onDelete }: Prop) {
         className={style.buttonIcon}
         onClick={() => onDelete(id)}
       >
-        <img src={trash} alt="delete the author from authors list" />
+        <img src={trash}  alt="delete the author from authors list" />
       </button>
     </div>
   );
