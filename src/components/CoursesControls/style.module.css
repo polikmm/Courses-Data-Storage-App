@@ -1,0 +1,11 @@
+.coursesControls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coursesList {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

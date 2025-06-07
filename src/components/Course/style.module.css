@@ -1,0 +1,49 @@
+.courseInfo {
+  position: relative;
+}
+
+.coursesCard {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 10px;
+  padding: 20px 40px 30px 20px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px var(--shadow);
+  border-radius: 5px;
+  border-left: 7px solid var(--card-flag);
+}
+
+.courseInfoCard {
+  display: grid;
+  grid-template-areas:
+    "course-card__title course-card__title course-card__title"
+    "course-card__description course-card__description course-card__info"
+    "course-card__description course-card__description course-card__info";
+  margin: 20px auto 40px;
+}
+
+.courseCardTitle {
+  grid-area: course-card__title;
+}
+
+.courseCardDescription {
+  grid-area: course-card__description;
+  max-width: 700px;
+}
+
+.courseCardInfo {
+  grid-area: course-card__info;
+}
+
+.courseInfoCardBackButton {
+  position: absolute;
+  right: 0;
+}
+
+.courseDetail span {
+  font-weight: bold;
+}
+
+.courseDetail {
+  font-weight: normal;
+}

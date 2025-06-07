@@ -1,0 +1,35 @@
+.searchBar {
+  display: flex;
+  gap: 30px;
+}
+
+.searchBar label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.searchBarInput {
+  padding: 5px 20px;
+  font-size: 1rem;
+  width: 250px;
+  border: 1px solid var(--light-grey);
+  border-radius: 5px;
+}
+
+.searchBarInput::placeholder {
+  color: var(--light-grey);
+}
+
+.searchBarInput:hover {
+  cursor: pointer;
+  border: 1px solid var(--shadow);
+}
+
+.searchBarInput:focus {
+  outline: none;
+  border: 1px solid var(--main-color);
+}

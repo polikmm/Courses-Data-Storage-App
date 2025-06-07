@@ -1,0 +1,23 @@
+.coursesCard {
+  display: grid;
+  grid-template-areas:
+    "course__title. "
+    "course__description course__details"
+    "course__description course__actions";
+  column-gap: 30px;
+  row-gap: 10px;
+  padding: 20px 40px 30px 20px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px var(--shadow);
+  border-radius: 5px;
+  border-left: 7px solid var(--card-flag);
+}
+
+.courseTitle {
+  grid-area: course__title;
+}
+
+.courseDescription {
+  grid-area: course__description;
+  max-width: 700px;
+}
