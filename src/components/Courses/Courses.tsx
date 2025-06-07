@@ -11,7 +11,7 @@ export function Courses() {
   return (
     <>
       <CoursesControls/>
-        <div className={styles.coursesList} data-testid="courses-list">
+        <div className={styles.coursesList} data-testid="courses-list" >
           {courses?.length > 0 &&
             courses.map((courseInfo) => (
               <CourseCard course={courseInfo} key={courseInfo.id} />
