@@ -14,6 +14,7 @@ import { fetchCourses } from './store/coursesSlice/coursesSlice'
 import type { AppDispatch } from './store'
 import { Wrapper } from './components/Wrapper/Wrapper'
 import { CourseEditor } from './components/CourseEditor/CourseEditor'
+import { CourseAdd } from './components/CourseAdd/CourseAdd'
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
@@ -35,6 +36,7 @@ function App() {
                 path={APP_ROUTES.COURSE_INFO_TEMPLATE}
                 element={<Course />}
               />
+                <Route path={APP_ROUTES.COURSE_ADD} element={<CourseAdd />} />
               <Route
                 path={APP_ROUTES.COURSE_EDIT_TEMPLATE}
                 element={<CourseEditor />}
