@@ -7,7 +7,7 @@ import { Title } from "./components/Title";
 import { Description } from "./components/Description";
 import { Duration } from "./components/Duration";
 import { Authors } from "./components/Authors/Authors";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { setCourses } from "../../store/coursesSlice/coursesSlice";
 import type { AuthorType } from "../../types/AuthorType";
 import { useState, useEffect } from "react";
@@ -19,6 +19,7 @@ import {
 } from "../../store/authorsSlice/authorsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../store/index";
+import { nanoid } from "@reduxjs/toolkit";
 
 export function CourseForm({
   pageTitle,
@@ -26,8 +27,8 @@ export function CourseForm({
   description,
   duration,
   courseAuthorIds,
-  onSubmit,
 }: CourseFormProps) {
+  const { id } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const authors = useSelector((state: RootState) => state.authors.authors);
@@ -68,17 +69,19 @@ export function CourseForm({
 
       return `${day}/${month}/${year}`;
     };
+
     const body = {
+      id: id || nanoid(),
       title: formTitle,
       description: formDescription,
       creationDate: creationDate(),
-      duration: formDuration,
+      duration: +formDuration,
       authors: courseAuthors.map((a) => a.id),
     };
 
-    const newCourse = await onSubmit(body);
-    const newData = courses.filter((c) => c.id !== newCourse.id);
-    dispatch(setCourses([newCourse, ...newData]));
+    const newData = courses.filter((c) => c.id !== body.id);
+    dispatch(setCourses([...newData, body]));
+    
     resetData();
   };
 

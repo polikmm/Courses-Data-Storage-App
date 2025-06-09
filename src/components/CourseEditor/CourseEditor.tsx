@@ -2,7 +2,6 @@ import { CourseForm } from "../CourseForm/CourseForm";
 import { COURSE_EDIT_TITLE } from "../../constants";
 import { useParams } from "react-router-dom";
 import { setCurrentCourse } from "../../store/coursesSlice/coursesSlice";
-import { editCourse } from "../../api/editCourse";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../store";
 import { useEffect } from "react";
@@ -31,7 +30,6 @@ export function CourseEditor() {
       description={courseData.description}
       duration={courseData.duration}
       courseAuthorIds={courseData.authors}
-      onSubmit={(body) => editCourse(body, id)}
     />
   );
 }
