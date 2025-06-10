@@ -66,7 +66,6 @@ export const coursesSlice = createSlice({
     },
     removeCourse(state, action: PayloadAction<string>) {
       state.courses = state.courses.filter((c) => c.id !== action.payload);
-      state.filteredCourses = state.courses.filter((c) => c.id !== action.payload);
     },
   },
   extraReducers: (builder) => {
