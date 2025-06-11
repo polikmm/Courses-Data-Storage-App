@@ -16,3 +16,14 @@
   width: 35px;
   height: 35px;
 }
+
+@media screen and (max-width: 900px){
+  .courseCardActions {
+    justify-self: center;
+  }
+  .courseCardEditButton img,
+  .courseCardDeleteButton img {
+  height: 25px;
+  width: 25px;
+}
+}

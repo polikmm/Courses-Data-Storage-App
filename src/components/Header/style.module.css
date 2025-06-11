@@ -4,7 +4,15 @@
   background-color: #fff;
 }
 
-.header .container {
+.container {
   display: flex;
   justify-content: space-between;
+  padding: 0 60px;
+}
+
+@media screen and (max-width: 900px){
+  .container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }

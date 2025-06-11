@@ -1,7 +1,7 @@
 .coursesCard {
   display: grid;
   grid-template-areas:
-    "course__title. "
+    "course__title course__title"
     "course__description course__details"
     "course__description course__actions";
   column-gap: 30px;
@@ -20,4 +20,17 @@
 .courseDescription {
   grid-area: course__description;
   max-width: 700px;
+  text-overflow: ellipsis;
+}
+
+
+@media screen and (max-width: 900px){
+  .coursesCard {
+    grid-template-areas:
+    "course__title course__title"
+    "course__description course__description"
+    "course__details course__details"
+    "course__actions course__actions";
+    row-gap: 20px;
+}
 }
