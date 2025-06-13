@@ -24,7 +24,7 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-    padding: 60px;
+  padding: 60px;
 }
 
 .courses {
@@ -85,8 +85,17 @@ body {
 }
 
 @media screen and (max-width: 900px){
+  .container {
+    padding: 30px;
+  }
   .button {
     height: 30px;
     font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .container {
+    padding: 5%;
   }
 }

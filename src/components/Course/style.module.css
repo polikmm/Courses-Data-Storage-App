@@ -47,3 +47,12 @@
 .courseDetail {
   font-weight: normal;
 }
+
+@media screen and (max-width: 800px){
+  .courseInfoCard {
+      grid-template-areas:
+    "course-card__title course-card__title course-card__title"
+    "course-card__description course-card__description course-card__description"
+    "course-card__info course-card__info course-card__info";
+  }
+}
