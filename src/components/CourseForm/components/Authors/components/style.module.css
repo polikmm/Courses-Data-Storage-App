@@ -5,10 +5,10 @@
     "label . . "
     "input input button"
     "warning warning warning";
-  column-gap: 10px;
+  gap: 10px;
   justify-content: left;
   align-items: center;
-  height: 80px;
+  min-height: 80px;
 }
 
 .warning {
@@ -29,9 +29,11 @@
 
 .authorsList {
   min-height: 150px;
+  max-height: 400px; 
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  flex-wrap: wrap;
 }
 
 .authorsListItem {
@@ -51,7 +53,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
+  align-items: start;
 }
 
 .courseAuthors div {
@@ -68,4 +70,14 @@
 .buttonIcon img {
   width: 20px;
   height: 20px;
+}
+
+@media screen and (max-width: 600px){
+  .addAuthor {
+      grid-template-areas:
+    "label . . "
+    "input input input"
+    "button button button"
+    "warning warning warning";
+  }
 }
