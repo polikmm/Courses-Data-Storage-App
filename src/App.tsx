@@ -5,7 +5,6 @@ import { APP_ROUTES } from './constants'
 import { AuthorisationRouter } from './routes/AuthorisationRouter'
 import { UserProvider } from './providers/UserProvider'
 import { Header } from './components/Header/Header'
-import { Courses } from './components/Courses/Courses'
 import { Course } from './components/Course/Course'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
@@ -15,6 +14,7 @@ import type { AppDispatch } from './store'
 import { Wrapper } from './components/Wrapper/Wrapper'
 import { CourseEditor } from './components/CourseEditor/CourseEditor'
 import { CourseAdd } from './components/CourseAdd/CourseAdd'
+import { CoursesContainer } from './components/CoursesContainer/CoursesContainer'
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
@@ -31,7 +31,7 @@ function App() {
         <Routes>
           <Route element={<AuthorisationRouter />}>
             <Route path={APP_ROUTES.HOME} element={<Wrapper />}>
-              <Route index path={APP_ROUTES.COURSES} element={<Courses />} />
+              <Route index path={APP_ROUTES.COURSES} element={<CoursesContainer />} />
               <Route
                 path={APP_ROUTES.COURSE_INFO_TEMPLATE}
                 element={<Course />}
