@@ -12,6 +12,8 @@
 
 .courseDetail span {
   font-weight: bold;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .courseDetail {

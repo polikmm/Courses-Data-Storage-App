@@ -28,7 +28,10 @@
 
 .courseCardDescription {
   grid-area: course-card__description;
-  max-width: 700px;
+  width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .courseCardInfo {
@@ -50,9 +53,7 @@
 
 @media screen and (max-width: 800px){
   .courseInfoCard {
-      grid-template-areas:
-    "course-card__title course-card__title course-card__title"
-    "course-card__description course-card__description course-card__description"
-    "course-card__info course-card__info course-card__info";
+display: flex;
+flex-direction: column;
   }
 }
