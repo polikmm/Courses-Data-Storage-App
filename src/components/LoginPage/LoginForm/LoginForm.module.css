@@ -63,3 +63,9 @@
   color: rgb(193, 1, 1);
   font-size: 1rem;
 }
+
+@media screen and (max-width: 450px){
+  .loginForm {
+    width: 80dvw;
+  }
+}
