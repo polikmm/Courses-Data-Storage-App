@@ -93,3 +93,12 @@ body {
     font-size: 0.65rem;
   }
 }
+
+@media (pointer: coarse) {
+  .button:hover {
+    box-shadow: none;
+  }
+  .input:hover {
+    border: 1px solid var(--light-grey);
+  }
+}
