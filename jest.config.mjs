@@ -1,11 +1,19 @@
-const config = {
-preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  moduleFileExtensions: ['ts', 'tsx', 'js'],
+/** @type {import('ts-jest').JestConfigWithTsJest} **/
+export default {
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    "^.+\\.[tj]sx?$": [
+      "ts-jest",
+      {
+        tsconfig: "tsconfig.app.json",
+      },
+    ],
+    "^.+\\.svg$": "<rootDir>/svgTransform.cjs",
   },
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  moduleNameMapper: {
+    "\\.(css|scss|sass)$": "identity-obj-proxy",
+    "\\.svg$": "<rootDir>/svgTransform.cjs",
+  },
 };
-
-export default config;
