@@ -8,7 +8,7 @@ export function Header() {
 
   return (
     <div className={styles.header}>
-      <div className={styles.container}>
+      <div className={`${styles.container} container`}>
         <a href="#">
           <img src={logo} alt="Logo" className={styles.headerLogo} />
         </a>
