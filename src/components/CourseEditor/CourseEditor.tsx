@@ -21,7 +21,6 @@ export function CourseEditor() {
     }
   }, [id, dispatch]);
 
-  console.log(courseData)
   if (!courseData || !id) return null;
 
   return (
